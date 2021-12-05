@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">ICP Challenge</string>
+    <string name="facebook_app_id">6584430904960845</string>
+    <string name="fb_login_protocol_scheme">fb6584430904960845</string>
+    <string name="facebook">Facebook</string>
+    <string name="authentication_error_title">Error en la operación</string>
+    <string name="authentication_error_message">Se ha producido un error de autenticación</string>
+    <string name="accept">Aceptar</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="user_name">Nombre</string>
+    <string name="user_surname">Apellido</string>
+    <string name="user_age">Edad</string>
+    <string name="user_birthdate">Fecha de nacimiento</string>
+    <string name="save">Guardar</string>
+    <string name="sms">SMS</string>
+    <string name="request_code">Solicitar código</string>
+    <string name="send_code">Enviar código</string>
+    <string name="select_login_method">Selecciona método de login</string>
+    <string name="phone_number">Número de teléfono</string>
+    <string name="code">Código</string>
+    <string name="invalid_request">Solicitud inválida</string>
+    <string name="quote_exceeded">Se ha excedido la cuota de SMS para el proyecto</string>
+    <string name="login">Login</string>
+    <string name="user_add">Alta de usuario</string>
+    <string name="phone_number_empty">El número de teléfono esta vacío</string>
+    <string name="code_empty">El código no puede ser vacío</string>
+    <string name="code_requested">Código solicitado</string>
+    <string name="user_data">Datos de usuario</string>
+    <string name="saving_error">Error guardando el usuario</string>
+    <string name="some_fields_empty">Se deben completar todos los campos</string>
+    <string name="users">Usuarios</string>
+    <string name="list_users">Listar usuarios</string>
+    <string name="getting_error">Error recuperar usuarios</string>
+</resources>

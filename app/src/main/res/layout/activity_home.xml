@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/space_16"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/dataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:text="@string/user_data"
+        android:textSize="@dimen/text_24"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="@dimen/no_space"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:textSize="@dimen/text_24"
+        android:hint="@string/user_name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dataTextView" />
+
+    <EditText
+        android:id="@+id/surnameEditText"
+        android:layout_width="@dimen/no_space"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:textSize="@dimen/text_24"
+        android:hint="@string/user_surname"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameEditText" />
+
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="@dimen/no_space"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:textSize="@dimen/text_24"
+        android:hint="@string/user_age"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/surnameEditText" />
+
+    <EditText
+        android:id="@+id/birthdateEditText"
+        android:layout_width="@dimen/no_space"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:textSize="@dimen/text_24"
+        android:hint="@string/user_birthdate"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ageEditText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveButton"
+        android:layout_width="@dimen/no_space"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:paddingStart="@dimen/space_16"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingEnd="@dimen/no_space"
+        android:paddingRight="@dimen/no_space"
+        android:background="@color/gray"
+        android:drawablePadding="@dimen/space_16"
+        android:textAllCaps="false"
+        android:text="@string/save"
+        android:textSize="@dimen/text_24"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/birthdateEditText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/showUsersButton"
+        android:layout_width="@dimen/no_space"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:paddingStart="@dimen/space_16"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingEnd="@dimen/no_space"
+        android:paddingRight="@dimen/no_space"
+        android:background="@color/gray"
+        android:drawablePadding="@dimen/space_16"
+        android:textAllCaps="false"
+        android:text="@string/list_users"
+        android:textSize="@dimen/text_24"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saveButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logoutButton"
+        android:layout_width="@dimen/no_space"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:paddingStart="@dimen/space_16"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingEnd="@dimen/no_space"
+        android:paddingRight="@dimen/no_space"
+        android:background="@color/gray"
+        android:drawablePadding="@dimen/space_16"
+        android:textAllCaps="false"
+        android:text="@string/logout"
+        android:textSize="@dimen/text_24"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/showUsersButton" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/space_60"
+        android:layout_height="@dimen/space_60"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/surnameEditText"
+        app:layout_constraintBottom_toTopOf="@id/ageEditText"
+        tools:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

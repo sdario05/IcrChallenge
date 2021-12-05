@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/space_16"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/loginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:text="@string/select_login_method"
+        android:textSize="@dimen/text_24"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/facebookButton"
+        android:layout_width="@dimen/no_space"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:paddingStart="@dimen/space_16"
+        android:paddingLeft="@dimen/space_16"
+        android:paddingEnd="@dimen/no_space"
+        android:paddingRight="@dimen/no_space"
+        android:background="@color/gray"
+        android:drawableLeft="@drawable/ic_facebook"
+        android:drawableStart="@drawable/ic_facebook"
+        android:drawablePadding="@dimen/space_16"
+        android:textAllCaps="false"
+        android:text="@string/facebook"
+        android:textSize="@dimen/text_24"
+        android:textAlignment="textStart"
+        android:gravity="start|center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginTextView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/phoneButton"
+        android:layout_width="@dimen/no_space"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:paddingStart="@dimen/space_28"
+        android:paddingLeft="@dimen/space_28"
+        android:paddingEnd="@dimen/no_space"
+        android:paddingRight="@dimen/no_space"
+        android:background="@color/gray"
+        android:drawableLeft="@drawable/ic_cellphone"
+        android:drawableStart="@drawable/ic_cellphone"
+        android:drawablePadding="@dimen/space_28"
+        android:textAllCaps="false"
+        android:text="@string/sms"
+        android:textSize="@dimen/text_24"
+        android:textAlignment="textStart"
+        android:gravity="start|center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/facebookButton" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phoneContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/space_16"
+        app:layout_constraintTop_toBottomOf="@id/phoneButton"
+        tools:visibility="visible">
+
+        <EditText
+            android:id="@+id/phoneNumberEditText"
+            android:layout_width="@dimen/no_space"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:paddingStart="@dimen/space_16"
+            android:paddingLeft="@dimen/no_space"
+            android:paddingRight="@dimen/no_space"
+            android:paddingEnd="@dimen/no_space"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/requestCodeButton"
+            android:layout_width="@dimen/no_space"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:paddingStart="@dimen/space_16"
+            android:paddingLeft="@dimen/no_space"
+            android:paddingRight="@dimen/no_space"
+            android:paddingEnd="@dimen/no_space"
+            android:background="@color/gray"
+            android:textAllCaps="false"
+            android:text="@string/request_code"
+            android:textSize="@dimen/text_24"
+            android:textAlignment="textStart"
+            android:gravity="start|center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneNumberEditText" />
+
+        <EditText
+            android:id="@+id/codeEditText"
+            android:layout_width="@dimen/no_space"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:paddingStart="@dimen/space_16"
+            android:paddingLeft="@dimen/no_space"
+            android:paddingRight="@dimen/no_space"
+            android:paddingEnd="@dimen/no_space"
+            android:hint="@string/code"
+            android:inputType="number"
+            android:enabled="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/requestCodeButton"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sendCodeButton"
+            android:layout_width="@dimen/no_space"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:paddingStart="@dimen/space_16"
+            android:paddingLeft="@dimen/no_space"
+            android:paddingRight="@dimen/no_space"
+            android:paddingEnd="@dimen/no_space"
+            android:background="@color/gray"
+            android:textAllCaps="false"
+            android:enabled="false"
+            android:text="@string/send_code"
+            android:textSize="@dimen/text_24"
+            android:textAlignment="textStart"
+            android:gravity="start|center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/codeEditText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/space_60"
+        android:layout_height="@dimen/space_60"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

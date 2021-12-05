@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1091582185144",
+    "firebase_url": "https://icp-firebase-default-rtdb.firebaseio.com",
+    "project_id": "icp-firebase",
+    "storage_bucket": "icp-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091582185144:android:80ec40d691abcead0fae4d",
+        "android_client_info": {
+          "package_name": "com.icp.icpchallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091582185144-1hs769l19gjivlpnmhru9flalubadj6b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.icp.icpchallenge",
+            "certificate_hash": "3b365a790e57e557f38b7db56b473469564b422e"
+          }
+        },
+        {
+          "client_id": "1091582185144-ttrvv4gtfvg614l9gje68s1dq504451p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfHVyO2TX8xd72v4XrWStRjxEIgF8uhdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091582185144-ttrvv4gtfvg614l9gje68s1dq504451p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

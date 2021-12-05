@@ -3,6 +3,7 @@ package com.icp.icpchallenge
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.facebook.CallbackManager
@@ -30,10 +31,10 @@ class LoginActivity : AppCompatActivity() {
 
         override fun onVerificationFailed(exception: FirebaseException) {
             resetViews()
-            if (exception is FirebaseAuthInvalidCredentialsException) {
-                showToast(this@LoginActivity, R.string.invalid_request)
-            } else if (exception is FirebaseTooManyRequestsException) {
-                showToast(this@LoginActivity, R.string.quote_exceeded)
+            when (exception) {
+                is FirebaseAuthInvalidCredentialsException -> showToast(this@LoginActivity, R.string.invalid_request)
+                is FirebaseTooManyRequestsException -> showToast(this@LoginActivity, R.string.quote_exceeded)
+                else -> Toast.makeText(this@LoginActivity, exception.message, Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -141,7 +142,7 @@ class LoginActivity : AppCompatActivity() {
     private fun showMessage() {
         val builder = AlertDialog.Builder(this)
         builder.run {
-            title = getString(R.string.authentication_error_title)
+            setTitle(getString(R.string.authentication_error_title))
             setMessage(getString(R.string.authentication_error_message))
             setPositiveButton(getString(R.string.accept), null)
         }
